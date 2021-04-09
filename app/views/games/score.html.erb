@@ -1,0 +1,18 @@
+<div>
+  <h1>
+    Result
+  </h1>
+
+  <p>
+    <% if @grammar && !@valid_word %>
+      <p>Sorry but <span><%= @answer %></span> can't be build out of <%= @rangeletters %></p>
+    <% elsif @grammar %>
+      <p><span>Congratulations!</span> <span>"<strong><%= @answer %>"</strong></span> is in the <%= @rangeletters %>.</p>
+    <% else %>
+      <p>Sorry but <span><%= @answer %></span> does not seem to be a valid English word...</p>
+    <% end %>
+  </p>
+
+  <span><%= link_to "Try me again", "new"%></span>
+</div>
+
